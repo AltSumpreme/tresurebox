@@ -1,0 +1,55 @@
+import random 
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+x=int(input("Input values from 0 to 2 signifying rock,paper,scissors: "))
+pli=[rock,paper,scissors]
+f=random.randrange(3)
+player1=pli[f]
+player2=pli[x]
+if player1== player2:
+    print("Tie")
+    
+if player1!= player2:
+    if player1==pli[0] and player2==pli[1]:
+       print("player2 wins")
+    elif player1==pli[1] and player2==pli[2]:
+       print("player2 wins")
+    elif player1==pli[2] and player2==pli[1]:
+       print("player2 wins")
+    elif player1==pli[2] and player2==pli[1]:
+       print("player1 wins")
+    elif player1==pli[0] and player2==pli[2]:
+       print("player1 wins")
+    elif player1==pli[0] and player2==pli[1]:
+       print("player2 wins")
+    elif player1==pli[1] and player1==pli[0]:
+        print("player1 wins")
+print("PLAYER1")
+print(player1)
+print("PLAYER2")
+print(player2)
